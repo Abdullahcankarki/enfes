@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold-50: #FBF7E4;
+  --color-gold-100: #F5EBBD;
+  --color-gold-200: #EDDF94;
+  --color-gold-300: #E5D36B;
+  --color-gold-400: #DFC94D;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #C9A030;
+  --color-gold-700: #BB8B28;
+  --color-gold-800: #AD7721;
+  --color-gold-900: #965A14;
+
+  --color-charcoal-50: #F5F5F5;
+  --color-charcoal-100: #E0E0E0;
+  --color-charcoal-200: #BDBDBD;
+  --color-charcoal-300: #9E9E9E;
+  --color-charcoal-400: #757575;
+  --color-charcoal-500: #4A4A4A;
+  --color-charcoal-600: #333333;
+  --color-charcoal-700: #2A2A2A;
+  --color-charcoal-800: #1A1A1A;
+  --color-charcoal-900: #0D0D0D;
+  --color-charcoal-950: #050505;
+
+  --color-cream-50: #FFFDF7;
+  --color-cream-100: #FFF9E8;
+  --color-cream-200: #FFF3D0;
+  --color-cream-300: #FFEAB0;
+  --color-cream-400: #F5E6CC;
+  --color-cream-500: #E8D5B5;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --text-display-xl: clamp(3rem, 8vw, 7rem);
+  --text-display-xl--line-height: 1.05;
+  --text-display-xl--letter-spacing: -0.02em;
+
+  --text-display-lg: clamp(2.5rem, 6vw, 5rem);
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+
+  --text-display-md: clamp(2rem, 4vw, 3.5rem);
+  --text-display-md--line-height: 1.15;
+  --text-display-md--letter-spacing: -0.01em;
+
+  --text-display-sm: clamp(1.5rem, 3vw, 2.5rem);
+  --text-display-sm--line-height: 1.2;
+
+  --max-width-content: 1280px;
+  --max-width-narrow: 960px;
+  --max-width-wide: 1440px;
+}
+
+html {
+  background-color: var(--color-charcoal-900);
+  color: var(--color-cream-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+::selection {
+  background-color: rgba(212, 175, 55, 0.3);
+  color: var(--color-cream-50);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-charcoal-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+@utility gold-gradient-text {
+  background-image: linear-gradient(to right, var(--color-gold-400), var(--color-gold-500), var(--color-gold-600));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility gold-divider {
+  height: 1px;
+  width: 5rem;
+  background-image: linear-gradient(to right, transparent, var(--color-gold-500), transparent);
+}
+
+@utility glass-card {
+  background-color: rgba(42, 42, 42, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 0.75rem;
+}
+
+@utility section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
