@@ -5,7 +5,7 @@ export function generateBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'FoodEstablishment',
     name: SITE_CONFIG.name,
-    description: 'ENFES – Spezialisierter Produktionsbetrieb für Premium Döner-Spezialitäten in Niedersachsen seit 2002.',
+    description: 'ENFES – Spezialisierter Produktionsbetrieb für Döner-Spezialitäten in Niedersachsen seit 2002.',
     telephone: SITE_CONFIG.phone,
     email: SITE_CONFIG.email,
     address: {

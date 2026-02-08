@@ -1,10 +1,15 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import StaggerChildren, { staggerItem } from '@/components/animations/StaggerChildren';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { PRODUCTS } from '@/lib/constants';
+
+const categoryColors: Record<string, string> = {
+  Rind: 'from-amber-900/40 to-charcoal-800',
+  Mix: 'from-gold-500/20 to-charcoal-800',
+  Geflügel: 'from-stone-700/40 to-charcoal-800',
+};
 
 export default function ProductsSection() {
   const featured = PRODUCTS.find((p) => p.featured);
@@ -30,16 +35,14 @@ export default function ProductsSection() {
               className="md:col-span-2 lg:col-span-2 group glass-card overflow-hidden hover:border-gold-500/30 transition-all duration-500"
             >
               <div className="grid grid-cols-1 md:grid-cols-2">
-                {/* Product Image */}
-                <div className="relative h-64 md:h-full min-h-[300px] overflow-hidden">
-                  <Image
-                    src={featured.image}
-                    alt={featured.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal-900/30" />
+                {/* Product Visual */}
+                <div className={`relative h-64 md:h-full min-h-[300px] overflow-hidden bg-gradient-to-br ${categoryColors[featured.category] || 'from-charcoal-700 to-charcoal-800'}`}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="font-serif text-[120px] md:text-[160px] font-bold text-gold-500/10 select-none">
+                      {featured.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(212,175,55,0.08),transparent_70%)]" />
                   <div className="absolute top-4 left-4">
                     <span className="bg-gold-500 text-charcoal-900 text-[10px] font-semibold uppercase tracking-wider px-3 py-1">
                       Bestseller
@@ -80,16 +83,14 @@ export default function ProductsSection() {
               variants={staggerItem}
               className="group glass-card overflow-hidden hover:border-gold-500/30 transition-all duration-500"
             >
-              {/* Product Image */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/40 to-transparent" />
+              {/* Product Visual */}
+              <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${categoryColors[product.category] || 'from-charcoal-700 to-charcoal-800'}`}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="font-serif text-[100px] font-bold text-gold-500/10 select-none group-hover:text-gold-500/15 transition-colors duration-500">
+                    {product.name.charAt(0)}
+                  </span>
+                </div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.06),transparent_70%)]" />
               </div>
 
               {/* Product Info */}

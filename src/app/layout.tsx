@@ -23,11 +23,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'ENFES – Premium Döner-Spezialitäten seit 2002',
+  title: 'ENFES – Döner-Spezialitäten seit 2002',
   description: 'ENFES produziert Döner-Spezialitäten mit ausgesuchten Zutaten und höchsten Qualitätsstandards. EU-zertifiziert, HACCP-System, 100% Halal.',
-  keywords: ['Döner', 'ENFES', 'Premium Döner', 'Halal', 'Niedersachsen', 'Döner Produktion'],
+  keywords: ['Döner', 'ENFES', 'Halal', 'Niedersachsen', 'Döner Produktion'],
   openGraph: {
-    title: 'ENFES – Premium Döner-Spezialitäten',
+    title: 'ENFES – Döner-Spezialitäten',
     description: 'Tradition trifft Innovation. Döner von herausragender Qualität seit 2002.',
     type: 'website',
   },

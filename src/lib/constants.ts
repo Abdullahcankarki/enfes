@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'ENFES',
   company: 'ENFES',
-  tagline: 'Premium Döner',
+  tagline: 'Döner',
   phone: '+49 (0)511 / 261347-20',
   phoneLink: 'tel:+4951126134720',
   email: 'info@enfes.de',
@@ -56,16 +56,8 @@ export const QUALITY_ITEMS = [
 ] as const;
 
 export const IMAGES = {
-  hero: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=1920&q=80',
-  about: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
-  products: {
-    danaYaprak: 'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=800&q=80',
-    kebap: 'https://images.unsplash.com/photo-1546445317-29f4545e9d53?w=600&q=80',
-    kiyma: 'https://images.unsplash.com/photo-1583242017813-8da32c561e2f?w=600&q=80',
-    danaHindi: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&q=80',
-    hindi: 'https://images.unsplash.com/photo-1574874434913-b8e5c0d5cfea?w=600&q=80',
-    tavuk: 'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=600&q=80',
-  },
+  hero: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=2560&q=90&auto=format&fit=crop',
+  about: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=90&auto=format&fit=crop',
 } as const;
 
 export const PRODUCTS = [
@@ -74,42 +66,36 @@ export const PRODUCTS = [
     category: 'Rind',
     description: 'Premium Rindfleisch in hauchdünnen Scheiben – der Klassiker für authentischen Döner-Genuss.',
     featured: true,
-    image: 'https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=800&q=80',
   },
   {
     name: 'Kebap',
     category: 'Rind',
     description: 'Klassischer Kebap aus bestem Rindfleisch.',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1546445317-29f4545e9d53?w=600&q=80',
   },
   {
     name: 'Kiyma',
     category: 'Rind',
     description: 'Feines Hackfleisch-Döner nach traditioneller Art.',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1583242017813-8da32c561e2f?w=600&q=80',
   },
   {
     name: 'Dana-Hindi',
     category: 'Mix',
     description: 'Perfekte Kombination aus Rind und Pute.',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&q=80',
   },
   {
     name: 'Hindi',
     category: 'Geflügel',
     description: 'Zartes Putenfleisch für leichten Genuss.',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1574874434913-b8e5c0d5cfea?w=600&q=80',
   },
   {
     name: 'Tavuk',
     category: 'Geflügel',
     description: 'Saftiges Hähnchenfleisch in Premium-Qualität.',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=600&q=80',
   },
 ] as const;
 
