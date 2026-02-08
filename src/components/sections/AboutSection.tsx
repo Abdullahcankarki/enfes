@@ -1,9 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import FadeInView from '@/components/animations/FadeInView';
 import CountUp from '@/components/animations/CountUp';
 import SectionHeading from '@/components/ui/SectionHeading';
-import { SITE_CONFIG } from '@/lib/constants';
+import { SITE_CONFIG, IMAGES } from '@/lib/constants';
 
 const features = [
   {
@@ -43,28 +44,17 @@ export default function AboutSection() {
         <SectionHeading label="Über Uns" title="Eine Tradition der Exzellenz" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-16">
-          {/* Visual Card */}
+          {/* Image */}
           <FadeInView direction="left">
-            <div className="relative aspect-[4/5] overflow-hidden bg-charcoal-800 flex items-center justify-center">
-              {/* Decorative background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-charcoal-800 via-charcoal-700 to-charcoal-800" />
-              <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.3) 0%, transparent 70%)',
-                }}
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <Image
+                src={IMAGES.about}
+                alt="ENFES Produktionsbetrieb"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
-
-              {/* Year Display */}
-              <div className="relative z-10 text-center">
-                <span className="font-serif text-8xl md:text-9xl font-bold gold-gradient-text">
-                  2002
-                </span>
-                <p className="text-charcoal-300 text-sm uppercase tracking-[0.2em] mt-2">
-                  Gründungsjahr
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/60 to-transparent" />
 
               {/* Floating Stats Card */}
               <div className="absolute bottom-6 left-6 right-6 glass-card p-6">
